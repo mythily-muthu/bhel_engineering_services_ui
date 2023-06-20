@@ -1,20 +1,20 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Topbar from "./components/Topbar";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import HomeScreen from "./components/HomeScreen";
-import OurServices from "./components/OurServices";
-import AboutUs from "./components/AboutUs";
+import HomePage from "./Pages/HomePage";
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
   return (
-    <div className="w-screen h-screen flex flex-col ">
+    <div className="w-screen h-full  flex flex-col  ">
       <Router>
         <Topbar />
         <Navbar />
-        <HomeScreen />
-        <AboutUs />
-        <OurServices />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
         <Footer />
       </Router>
     </div>

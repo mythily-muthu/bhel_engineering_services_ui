@@ -31,8 +31,9 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="  w-full h-20 p-6 items-center justify-between flex">
+    <div className="  w-full h-20 p-6 items-center justify-between flex sticky top-0 bg-white  z-20">
       <div className="flex items-center w-full gap-14">
+        {/* logo */}
         <div className=" flex items-center w-32 h-20 ">
           <img
             alt="logo"
@@ -40,7 +41,8 @@ const Navbar = () => {
             className="w-full object-cover"
           />
         </div>
-        <div className="flex gap-x-8">
+        {/* nav items */}
+        <div className=" gap-x-8 hidden md:flex ">
           {navList.map((item) => {
             return (
               <p
@@ -59,6 +61,7 @@ const Navbar = () => {
           })}
         </div>
       </div>
+      {/* button */}
       <div className="flex bg-primary text-white justify-end">
         <button className="flex font-normal tracking-wide text-base px-6 py-2 uppercase whitespace-nowrap">
           contact now

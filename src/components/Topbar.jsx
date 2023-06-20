@@ -3,7 +3,7 @@ import { BiBulb } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 const Topbar = () => {
   return (
-    <div className="flex  w-full h-9 bg-primary text-white ">
+    <div className=" hidden  md:flex  w-full h-9 bg-primary text-white ">
       <div className="flex items-center w-[60%] justify-between mx-auto text-base font-normal tracking-wide">
         <p>Monday - Friday 6AM - 5PM</p>
         <p className="flex items-center gap-2">
